@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Librerias de css en bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/f138f2a48c.js" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Icono de la página -->
+    <link rel="shorcut icon" href="https://cdn-icons-png.flaticon.com/512/1598/1598196.png" />
+
+    <title>Registrarse</title>
+</head>
+<body>
+      <!-- Cabecera - Creación del contenedor Navbar o barra de navegación -->
+      <div class="contenedorNav">
+        <nav class="navbar navbar-expand-lg" style="background-color: skyblue;">
+            <div class="container-fluid">
+                <h5><a class="navbar-brand" href="/">
+                    </a></h5>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <h5><a class="nav-link active" aria-current="page" href="/">Inicio</a></h5>
+                        </li>
+                        <!--Agregamos la lista desplegable para los servicios-->
+                        <h5>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                                    data-toggle="dropdown" aria-expanded="false">
+                                    Servicios a Ofrecer
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="/servicios">Servicios</a></li>
+                                    <li><a class="dropdown-item" href="/temas">Temática de redes Sociales</a></li>
+                                    <li><a class="dropdown-item" href="/anuncios">Anuncios Publicitarios</a></li>
+                                    <li><a class="dropdown-item" href="/contProv">Contactar Proveedor</a></li>
+                                </ul>
+                            </li>
+                        </h5>
+                        <li class="nav-item">
+                            <h5><a class="nav-link" aria-current="page" href="/acerca">Acerca de Nosotros</a></h5>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!--Componentes para el formulario de registro de usuario -->
+
+    <main class="form-signin w-100 m-auto">
+        <form method="post" action="{{url_for('registro')}}">
+            <img class="mb-3" src="   https://cdn-icons-png.flaticon.com/128/3597/3597075.png" alt="" width="80"
+                height="70">
+            <h1 class="h3 mb-3 fw-normal">Crear Cuenta</h1>
+
+            <div class="form-floating p-2">
+                <input type="text" class="form-control" id="ingresoDatos" name="name" required>
+                <label for="ingresoDatos">Nombre</label>
+            </div>
+            <div class="form-floating p-2">
+                <input type="email" class="form-control" id="ingresoDatos" name="email" required>
+                <label for="ingresoDatos">Correo Electrónico</label>
+            </div>
+            <div class="form-floating p-2">
+                <input type="password" class="form-control" id="ingresoClave" name="clave" required>
+                <label for="ingresoClave">Contraseña</label>
+            </div>
+            <div class="my-2 mx-4">
+                <sapn>Ya tienes cuenta? <a href="/login">Inicia Sesión</a></sapn><br>
+            </div>
+            <button class="w-100 btn btn-lg btn-outline-primary registrar" name="registro"
+                type="submit">Registrarse</button>
+        </form>
+    </main>
+
+    <!-- Componentes del navegador final para la información de la empresa-->
+    <nav class="nav navbar-expand-lg p-3" style="background-color: rgb(208, 236, 247);">
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Nosotros</h6>
+            <p><a class="text-black" href="/quienes">¿Quiénes somos?</a></p>
+            <p><a class="text-black" href="/politica">Política de privacidad</a></p>
+            <p><a class="text-black" href="/contacto">Contacto</a></p>
+            </ul>
+        </div>
+        <!-- Componentes del navegador final para la información de la empresa-->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Contacto</h6>
+            <p><i class="fas fa-home mr-3"></i> Sto.Dgo, Vía Quevedo km 24, EC</p>
+            <p><i class="fas fa-envelope mr-3"></i> orgarces@espe.edu.ec</p>
+            <p><i class="fas fa-phone mr-3"></i> + 593 99 396 5108</p>
+        </div>
+        <!-- Componentes del navegador final para la información de la empresa-->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Síguenos</h6>
+
+            <!-- icono de Facebook -->
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998"
+                href="https://www.facebook.com/Valerachel0218" role="button"><i class="fab fa-facebook-f"></i></a>
+
+            <!-- icono de Twitter -->
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee"
+                href="https://www.twitter.com/" role="button"><i class="fab fa-twitter"></i></a>
+
+            <!-- icono de youtube -->
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39"
+                href="https://www.youtube.com/" role="button"><i class="fab fa-youtube"></i></a>
+
+            <!-- icono de Instagram -->
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac"
+                href="https://www.instagram.com/" role="button"><i class="fab fa-instagram"></i></a>
+        </div>
+        </div>
+
+
+    </nav>
+    <!--Footer-->
+    <footer class="footer p-2" style="background-color: skyblue;">
+        <div class="container-footer align-text-center">
+            <center>
+                <p>© 2022 Universidad de las Fuerzas Armadas Espe.</p>
+            </center>
+        </div>
+    </footer>
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
+<style>
+    .colorL {
+
+        color: black;
+
+
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    .login {
+        display: flex;
+        align-items: center;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .form-signin {
+        max-width: 330px;
+        padding: 15px;
+    }
+
+    .form-signin .form-floating:focus-within {
+        z-index: 2;
+    }
+
+    .form-signin input[type="email"] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .form-signin input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+</style>
