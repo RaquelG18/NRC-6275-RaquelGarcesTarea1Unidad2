@@ -24,10 +24,10 @@ app.config['CAPTCHA_HEIGHT'] = 60
 app.config['SESSION_MONGODB'] = mongoClient
 app.config['SESSION_TYPE'] = 'mongodb'
 
-# Enables server session
+# habilita la sesion del servidor 
 Session(app)
 
-# Initialize FlaskSessionCaptcha
+# Inicializamos el FlaskSessionCaptcha
 captcha = FlaskSessionCaptcha(app)
 
 # creamos el decorador para la ruta principal y agregamos los metodos get y post 
@@ -35,9 +35,9 @@ captcha = FlaskSessionCaptcha(app)
 def index():  # Creamos la función
     if request.method == "POST":
         if captcha.validate():
-            return "success"
+            return "Éxito"
         else:
-            return "fail"
+            return "Error"
 # Redirección a la pagina formulario.html
     return render_template("formulario.html")
 
