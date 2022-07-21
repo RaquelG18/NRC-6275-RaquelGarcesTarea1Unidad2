@@ -1,9 +1,3 @@
-//Tambien valida los datos del formulario
-/*
-    Se crea una funcion que permita validar los datos del formulario,
-     añadiendo en los campos la restricción "required" y confirmando el valor con "true"
-
-*/
 $(document).ready(function () {
     $("#datosformulario").validate({
         rules: {

@@ -1,3 +1,4 @@
+#importamos las librerias necesarias 
 import uuid
 import logging
 from flask import Flask, render_template, request
@@ -18,7 +19,7 @@ app.config['CAPTCHA_ENABLE'] = True
 # permite 5 caracteres en el captcha
 app.config['CAPTCHA_LENGTH'] = 5
 
-# Setea los captcha height and width
+# Setea los valores del captcha 
 app.config['CAPTCHA_WIDTH'] = 160
 app.config['CAPTCHA_HEIGHT'] = 60
 app.config['SESSION_MONGODB'] = mongoClient
