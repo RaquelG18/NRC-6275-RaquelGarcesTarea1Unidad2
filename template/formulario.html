@@ -16,7 +16,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
-    <script src="/js.js"></script>
     <!-- Icono de la página -->
     <link rel="shorcut icon" href="https://cdn-icons-png.flaticon.com/512/1598/1598196.png" />
 
@@ -47,22 +46,22 @@
                 <input type="text" class="form-control" id="ingresoDatos" name="name" required>
                 <label for="ingresoDatos">Nombre</label>
             </div>
-             <!--Componnete para la seccion de Apellido-->
+            <!--Componnete para la seccion de Apellido-->
             <div class="form-floating p-2">
                 <input type="text" class="form-control" id="ingresoDatos" name="apellido" required>
                 <label for="ingresoDatos">Apellido</label>
             </div>
-             <!--Componnete para la seccion de Edad-->
+            <!--Componnete para la seccion de Edad-->
             <div class="form-floating p-2">
                 <input type="number" class="form-control" id="ingresoDatos" name="edad" required>
                 <label for="ingresoDatos">Edad</label>
             </div>
-             <!--Componnete para la seccion de Email-->
+            <!--Componnete para la seccion de Email-->
             <div class="form-floating p-2">
                 <input type="email" class="form-control" id="ingresoDatos" name="email" required>
                 <label for="ingresoDatos">Email</label>
             </div>
-             <!--Componnete para la seccion de Mensaje-->
+            <!--Componnete para la seccion de Mensaje-->
             <div class="form-floating p-2">
                 <textarea class="form-control" for="ingresoDatos" rows="3"></textarea>
                 <label for="ingresoDatos">Mensaje</label>
@@ -71,15 +70,15 @@
                 <div class="captcha-area">
                     <label>Captcha</label>
                     <div class="captcha">
-                            <!-- Esta linea de codigo nos permite crear el captcha -->
-                            {{ captcha() }}
-                            <input type="text" name="captcha">
-                            <div>
+                        <!-- Esta linea de codigo nos permite crear el captcha -->
+                        {{ captcha() }}
+                        <input type="text" name="captcha">
+                        <div>
                             <input class="form-check-input" type="checkbox" id="chequear">
                             <label class="form-check-label" for="gridCheck">
-                              Enviarme una copia de este mensaje
+                                Enviarme una copia de este mensaje
                             </label>
-                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -154,11 +153,10 @@
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
         </script>
 
+    <script src="/js.js"></script>
 </body>
 
 </html>
-
-
 
 
 
@@ -203,7 +201,7 @@
         border-top-right-radius: 0;
     }
 
-    .captcha{
+    .captcha {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
