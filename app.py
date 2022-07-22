@@ -31,7 +31,8 @@ Session(app)
 # Inicializamos el FlaskSessionCaptcha
 captcha = FlaskSessionCaptcha(app)
 
-# creamos el decorador para la ruta principal y agregamos los metodos get y post 
+# creamos el decorador para la ruta principal 
+# y agregamos los metodos get y post 
 @app.route('/', methods=['POST', 'GET'])
 def index():  # Creamos la función
     if request.method == "POST":
